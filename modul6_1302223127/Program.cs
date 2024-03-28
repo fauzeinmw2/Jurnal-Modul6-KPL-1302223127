@@ -15,7 +15,16 @@ internal class Program
         SayaTubeVideo film9 = new SayaTubeVideo("Review Film 9 oleh fauzein");
         SayaTubeVideo film10 = new SayaTubeVideo("Review Film 10 oleh fauzein");
 
-        agakLaen.IncreasePlayCount(9000000);
+       // SayaTubeVideo film11 = new SayaTubeVideo("Review Film 10 oleh fauzein Review Film 10 oleh fauzein Review Film 10 oleh fauzein Review Film 10 oleh fauzein Review FilmReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzeinReview Film 10 oleh fauzein 10 oleh fauzein Review Film 10 oleh fauzein Review Film 10 oleh fauzein");
+
+        for (int i = 1; i <= 217; i++)
+        {
+            agakLaen.IncreasePlayCount(10000000);
+        }
+
+        
+       // agakLaen.IncreasePlayCount(int.MaxValue);
+
         film2.IncreasePlayCount(100000);
         film3.IncreasePlayCount(800000);
         film4.IncreasePlayCount(9000);

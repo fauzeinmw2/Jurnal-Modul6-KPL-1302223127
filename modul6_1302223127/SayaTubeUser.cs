@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace modul6_1302223127
 {
@@ -14,6 +16,9 @@ namespace modul6_1302223127
 
         public SayaTubeUser(string username)
         {
+            Debug.Assert(username != null && username.Length != 0, "Username tidak boleh kosong");
+            Debug.Assert(username.Length <= 100, "Panjang username tidask boleh lebih dari 100 karakter");
+
             this.id = new Random().Next(11111, 99999);
             this.username = username;
             this.uploadedVideos = new List<SayaTubeVideo>();
@@ -38,12 +43,11 @@ namespace modul6_1302223127
 
         public void PrintAllVideoPlaycount()
         {
-            int i = 1;
             Console.WriteLine($"User : {username}");
 
-            foreach (var data in uploadedVideos)
+            for (int i = 0; i < 8; i++)
             {
-                Console.WriteLine($"Video {i} judul : {data.getTitle()}");
+                Console.WriteLine($"Video {i} judul : {uploadedVideos[i].getTitle()}");
             }
         }
     }
